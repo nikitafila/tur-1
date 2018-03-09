@@ -1,6 +1,10 @@
 html, body {
   background-color: #fff; }
 
+h1, h2, h3 {
+  width: 100%;
+  text-align: center; }
+
 body {
   font-size: 16px;
   line-height: 1.4;
@@ -73,6 +77,19 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.main-block-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  margin-top: 20px; }
+
 .main-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,8 +103,22 @@ main {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid black;
   height: 200px;
-  border: 1px solid black; }
+  margin: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.lodf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 aside {
   background-color: red;
@@ -95,7 +126,16 @@ aside {
 
 footer {
   width: 100%;
-  background-color: black; }
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .logo {
   background-image: url("/img/logo.svg");
@@ -130,11 +170,31 @@ footer {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-    .popular h2 {
-      width: 100%;
-      text-align: center; }
     .popular .popular-block {
       width: 40%; } }
+
+@media screen and (min-width: 768px) {
+  .lodf {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .main-block {
+    width: 50%; }
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
 
 @media screen and (min-width: 992px) {
   .wrapper {
